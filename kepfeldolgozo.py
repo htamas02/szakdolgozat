@@ -30,4 +30,5 @@ def kepvagas(kepnev):
             cv2.imwrite(filename, tile)
             count += 1
 
-    print(f"{count} db négyzet elmentve a 'tiles' mappába.")
+    print(f"{count} db négyzet elmentve a tiles mappába.")
+
