@@ -78,7 +78,7 @@ def start_watering(duration):
         print("Várakozás")
         return
     print(f"Locsolás indul {duration} mp-re")
-    relay3.value(0)  # aktív LOW → bekapcsol
+    relay3.value(0)  # bekapcsol
     watering_active = True
     watering_start_time = time.ticks_ms()
     watering_duration = duration * 1000
@@ -134,7 +134,7 @@ def control_light(on_time, off_time):
         print(f"Idő: {now_hour}:{now_min} | Bekapcsol: {on_time} | Kikapcsol: {off_time}")
 
         if on_total <= now_total < off_total:
-            relay2.value(1)  # aktív LOW → bekapcsol
+            relay2.value(1)  # bekapcsol
             print("Lámpa bekapcsolva")
         else:
             relay2.value(0)  # kikapcsol
@@ -205,6 +205,7 @@ while True:
         last_watering_end = time.ticks_ms()
         print("Locsolás vége, most szünet jön")
     time.sleep(1)
+
 
 
 
