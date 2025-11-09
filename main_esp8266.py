@@ -24,7 +24,7 @@ try:
 except Exception as e:
     print("hiba:", e)
 
-# --- GPIO beállítások ---
+#relék
 relay = Pin(5, Pin.OUT)     # Szellőztetés
 relay2 = Pin(4, Pin.OUT)    # Lámpa
 relay3 = Pin(2, Pin.OUT)    # Locsolás
@@ -205,5 +205,6 @@ while True:
         last_watering_end = time.ticks_ms()
         print("Locsolás vége, most szünet jön")
     time.sleep(1)
+
 
 
