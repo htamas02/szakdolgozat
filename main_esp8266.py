@@ -5,7 +5,7 @@ import ahtx0
 
 #WIFI
 WIFI_SSID = "HEGYINET"
-WIFI_PASS = "Xa47$Pa7#hW4@i6"
+WIFI_PASS = ""
 
 sta_if = network.WLAN(network.STA_IF)
 sta_if.active(True)
@@ -205,4 +205,5 @@ while True:
         last_watering_end = time.ticks_ms()
         print("Locsolás vége, most szünet jön")
     time.sleep(1)
+
 
