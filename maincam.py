@@ -7,8 +7,8 @@ import machine
 
 
 #Wifi csatlakozás
-ssid = 'HEGYINET'
-password = 'Xa47$Pa7#hW4@i6'
+ssid = "HEGYINET"
+password = ""
 
 station = network.WLAN(network.STA_IF)
 station.active(True)
@@ -20,9 +20,9 @@ for _ in range(20):
     time.sleep(1)
 
 if station.isconnected():
-    print('WiFi csatlakozva:', station.ifconfig())
+    print("WiFi csatlakozva:", station.ifconfig())
 else:
-    print('WiFi hiba! Ellenőrizd az SSID-t és jelszót.')
+    print("WiFi hiba! Ellenőrizd az SSID-t és jelszót.")
 
 camera.init(0, format=camera.JPEG, fb_location=camera.PSRAM)
 camera.quality(10)
@@ -41,3 +41,4 @@ while True:
         print("Hiba kép küldés közben:", e)
     #camera.deinit()
     time.sleep(300)
+
